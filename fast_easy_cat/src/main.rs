@@ -116,7 +116,7 @@ fn main() -> std::io::Result<()> {
                     .and_modify(|e: &mut Vec<std::path::PathBuf>| { e.push(ofc2) } )
                     .or_insert(vec![ofc]);//.push(ofc2);
                 
-                println!("{:?}", outfile.display())
+                // println!("{:?}", outfile.display())
             },
             Err(e) => println!("{:?}", e),
         }
@@ -148,7 +148,7 @@ fn main() -> std::io::Result<()> {
                 & mut printed_desc);
 
             let only_scorelines = filter_for_scorelines(&contents);
-            println!("{:?}", only_scorelines);
+            // println!("{:?}", only_scorelines);
                 //file_path.strip_prefix(path)?.ancestors().next());
             output_file.write_all(format!("{}\n", contents).as_str().as_bytes())?;
             scorefile.write_all(format!("{}\n", only_scorelines).as_str().as_bytes())?;
@@ -160,7 +160,7 @@ fn main() -> std::io::Result<()> {
     }
 
 
-    println!("Hello, world!");
+    // println!("Hello, world!");
     // println!("{:?}", args.path.display());
     Ok(())
 }
